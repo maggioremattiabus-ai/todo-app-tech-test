@@ -1,4 +1,5 @@
 README--------------------------------------------------------
+
 Tecnologie utilizzate: 
 (Front-End)React JS: v19.1.1
 (Back-End)Spring Boot: v3.5.6
