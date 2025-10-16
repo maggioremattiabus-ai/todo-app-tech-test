@@ -1,0 +1,217 @@
+
+/* COMPONENTE BASE E TITOLO*/
+
+
+.App-Container {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Impila verticalmente Titolo e Contenuto */
+    align-items: center;
+    padding: 100px;
+    min-height: 100vh; 
+    background-color: #f4f4f9; 
+}
+
+.main-title {
+  font-style: Helvetica;
+    color: #333;
+    margin-bottom: 60px;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #b8b8b8;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #1c1c1d;
+}
+
+/*  */
+
+.main-content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Spazia gli elementi laterali */
+    align-items: flex-start; /* Allinea gli elementi in alto */
+    width: 100%; /* Larghezza massima del contenitore */
+    max-width: 1400px; /* Limite massimo per schermi grandi */
+    gap: 30px; /* Spazio tra le colonne */
+}
+
+
+/* PARTE DI SINISTRA */
+
+.add-task-form,
+.modify-task-form {
+    flex-basis: 25%; /* Dà una base di larghezza del 25% */
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* PARTE CENTRALE */
+
+.list-container {
+    flex-grow: 1; 
+    flex-basis: 90%; 
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.list-container h3{
+  text-align: center;
+  margin-top: 5px;
+}
+
+.list-content {
+    list-style: none;
+    padding: 0;
+}
+
+
+.counter-and-modify-wrapper {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column; /* Impila Modifica e Contatori */
+    gap: 20px;
+}
+
+/* I contatori vengono posizionati sotto il form di aggiornamento */
+.task-counters {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #e9e9e9;
+    font-weight: bold;
+}
+.task-counters span {
+    margin-bottom: 5px;
+}
+
+
+/* TASK CONDIIZONALI */
+
+.list-content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-left: 5px solid;
+    transition: background-color 0.3s;
+    /* Consente l'andata a capo se il contenuto è troppo lungo */
+    flex-wrap: nowrap; 
+    min-height: 50px; 
+}
+.task-data {
+    display: flex;
+    flex-direction: column; /* Impila Titolo e Descrizione */
+    flex-basis: 80%; 
+    overflow: hidden; /* Nasconde l'eccesso di testo */
+    margin-right: 15px; /* Spazio dal gruppo pulsanti */
+}
+.task-data span {
+  font-size: small;
+    white-space: nowrap; /* Impedisce che il testo vada a capo */
+    overflow: hidden; 
+    text-overflow: ellipsis; /* Aggiunge i puntini di sospensione*/
+}
+.task-data span:first-child {
+    font-weight: bold;
+    font-size: medium;
+    color: #616161;
+    margin-bottom: 3px;
+}
+.div-buttons {
+    flex-basis: 25%; 
+    display: flex;
+    justify-content: flex-end; /* Allinea i pulsanti a destra */
+    gap: 5px; /* Spazio tra i pulsanti */
+    min-width: 120px;
+}
+.list-content button {
+    margin-left: 0;
+    padding: 5px 8px; /* Pulsanti più piccoli */
+}
+
+
+/* Task completato */
+.list-component-completed {
+    background-color: #d4edda;
+    border-color: #28a745; 
+}
+
+/* Task scaduto */
+.list-component-expired {
+    background-color: #f8d7da;
+    border-color: #dc3545; 
+}
+
+/* Task in scadenza  */
+.list-component-expiring {
+    background-color: #fff3cd;
+    border-color: #ffc107; 
+}
+
+/* Task default */
+.list-component {
+    background-color: #e9ecef;
+    border-color: #007bff; /* Blu */
+}
+
+/* Stile per i pulsanti all'interno della lista */
+
+.list-content button {
+    margin-left: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    
+}
+.list-content button:hover{
+  border-color: #1c1c1d;
+  background: #c2c2c2;
+}
+
+input[type="text"]{
+  font-style: sans-serif;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-style: sans-serif;
+  border-radius: 4px;
+}
+input[type="datetime-local"] {
+    
+    padding: 10px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+   
+}
+
+h2{
+  align-content: center;
+}
