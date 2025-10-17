@@ -19,7 +19,8 @@ function AddTask({addTask}){
             setDescrizione("");
         }else{
             addTask(task);// utilizza la funzione passata dal componente App (associata a addTask)
-            
+            setTitolo("");
+            setDescrizione("");
         }
     }
             
